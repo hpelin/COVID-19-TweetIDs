@@ -44,7 +44,9 @@ for tweet_file in tqdm(tweet_IDs):
 
     tweets = np.random.choice(tweets, args.sample_size)
 
-    with open(path + "Random_" + str(args.sample_size) + tweet_file, "w") as x:
+    with open(
+        "_".join([args.path + "Random", str(args.sample_size), tweet_file]), "w"
+    ) as x:
         for tweetID in tweets:
             x.write(tweetID + "\n")
 
