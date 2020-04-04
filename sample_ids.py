@@ -44,12 +44,12 @@ for tweet_file in tqdm(tweet_IDs):
         tweets = np.array([line.replace("\n", "") for line in t])
 
     Sampled_tweet_IDs = np.append(
-        Sampled_tweet_IDs, np.random.choice(tweets, len(tweets) // args.sample_size)
+        Sampled_tweet_IDs, np.random.choice(tweets, len(tweets) // args.fraction_size)
     )
 
 with open(
     "_".join(
-        [args.path + "Random", str(args.sample_size), args.path.replace("/", "-"),]
+        [args.path + "Random", str(args.fraction_size), args.path.replace("/", "-"),]
     )
     + ".txt",
     "w",
