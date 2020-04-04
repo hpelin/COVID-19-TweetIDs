@@ -14,8 +14,8 @@ parser.add_argument(
     "-r",
     "--random_seed",
     type=int,
-    help="random seed for sampling. None by default",
-    default=None,
+    help="random seed for sampling. 42 by default",
+    default=42,
 )
 parser.add_argument(
     "-p",
